@@ -1,1 +1,129 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+/* Configurações gerais */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* cores da página */
+
+  --color-header-footer-text: #365A5A;
+  --color-login: #fff;
+
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Estilização header */
+
+header{
+  background-color: var(--color-header-footer-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem ;
+}
+
+header > h1 a img{
+  width: 25rem;
+}
+
+#login{
+  display: flex;
+  align-items: center;
+  
+}
+
+#login a {
+  font-size: 4rem;
+  text-decoration: none;
+  color: var(--color-login);
+  margin-top: 2rem;
+}
+
+/* Estilização main */
+
+.container{
+  width: 85%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+main{
+  text-align: center;
+  margin-top: 2rem; 
+}
+
+main input{
+ text-align: center;
+ width: 100%;
+ padding: 1.5rem;
+ font-size: 2rem;
+ border-radius: 5rem;
+ border: 0.2px solid var(--color-header-footer-text);
+}
+
+main input::placeholder{
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+main h2{
+  margin-top: 8rem;
+  margin-bottom: 16rem;
+  font-size: 6rem;
+  font-weight: 200;
+}
+
+/* Estilização livros em alta */
+
+section p{
+  font-size: 4rem;
+  font-weight: 200;
+  margin-bottom: 6.5rem;
+}
+
+.card{
+  display: flex;
+  column-gap: 2.5rem; 
+  
+}
+
+.card img{
+  width: auto;
+  aspect-ratio: 9/10;
+  border-radius: .5rem;
+}
+
+#categories{
+  margin-top: 12rem;
+}
+
+#categories > div{
+ margin-bottom: 2rem;
+}
+
+footer{
+  background-color: var(--color-header-footer-text);
+  padding: 1.5rem ;
+  text-align: center;
+}
+
+footer img{
+  width: 25rem;
+
+}
