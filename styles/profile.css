@@ -1,0 +1,18 @@
+@import url(./global.css);
+
+section{
+    display: flex;
+    align-items: center;
+    column-gap: 7rem;
+    padding: 7rem;
+    border-bottom: 2px solid var(--color-header-footer-text);
+}
+
+.infobook p{
+    margin-bottom: 3.7rem;
+    font-size: 4rem;
+}
+
+.infobook i{
+    margin: 3.7rem 0;
+}

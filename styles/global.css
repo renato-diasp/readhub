@@ -1,5 +1,7 @@
-/* Importação das fontes */
+/* Importação das fontes e estilos */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url(./header.css);
+@import url(./footer.css);
 
 /* Configurações gerais */
 
@@ -22,6 +24,8 @@
 
 }
 
+
+
 body {
   font-size: 1.6rem;
   font-family: "Josefin Sans", sans-serif;
@@ -29,31 +33,7 @@ body {
 
 /* Estilização header */
 
-header{
-  background-color: var(--color-header-footer-text);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  padding: 1.5rem ;
-}
-
-header > h1 a img{
-  width: 25rem;
-}
-
-#login{
-  display: flex;
-  align-items: center;
-  
-}
-
-#login a {
-  font-size: 4rem;
-  text-decoration: none;
-  color: var(--color-login);
-  margin-top: 2rem;
-}
 
 /* Estilização main */
 
@@ -117,13 +97,3 @@ section p{
  margin-bottom: 2rem;
 }
 
-footer{
-  background-color: var(--color-header-footer-text);
-  padding: 1.5rem ;
-  text-align: center;
-}
-
-footer img{
-  width: 25rem;
-
-}

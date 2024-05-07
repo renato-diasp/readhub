@@ -1,0 +1,10 @@
+footer{
+    background-color: var(--color-header-footer-text);
+    padding: 1.5rem ;
+    text-align: center;
+  }
+  
+  footer img{
+    width: 25rem;
+  
+  }

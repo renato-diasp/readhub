@@ -1,0 +1,25 @@
+header{
+    background-color: var(--color-header-footer-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 1.5rem ;
+  }
+  
+  header > h1 a img{
+    width: 25rem;
+  }
+  
+  #login{
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  #login a {
+    font-size: 4rem;
+    text-decoration: none;
+    color: var(--color-login);
+    margin-top: 2rem;
+  }
