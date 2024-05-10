@@ -23,3 +23,27 @@ header{
     color: var(--color-login);
     margin-top: 2rem;
   }
+
+  /*estilização do botão switch */
+
+  .switch {
+  background-color: #ffffff;
+  border: none;
+  color: #365A5A;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 60px;
+}
+
+.switch.on {
+  background-color: #95BFBE; /* cor quando estiver ligado */
+}
+
+.switch.off {
+  background-color: #95BFBE; /* cor quando estiver desligado */
+}
