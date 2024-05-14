@@ -91,6 +91,12 @@ main button{
 
 #infobook{
   display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.bookObject{
+  display: flex;
   gap: 5rem;
   justify-content: center;
   align-items: center;
@@ -98,18 +104,21 @@ main button{
   border-radius: 2rem;
   width: 40%;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 4rem;
   margin-bottom: 3rem;
-
   font-size: 2rem;
   font-weight: 300;
 }
 
-#infobook img{
-  border-radius: .5rem;
+.bookObject img{
+  border-radius: .5rem;  
 }
 
-#infobook span{
+.bookObject p{
+  line-height: 2.5rem;
+}
+
+.bookObject span{
   font-weight: 500;
 }
 
@@ -117,11 +126,12 @@ main button{
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-  width: 30rem;
+  width: 35rem;
   height: 25rem;
   overflow-y: auto;
   text-align: left;
   padding: .2rem;
+  font-size: 2rem;
 }
 
 

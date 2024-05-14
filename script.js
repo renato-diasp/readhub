@@ -17,3 +17,117 @@ function toggleSwitch() {
     window.location.href = "./index.html" ;
   }
 }
+
+// consumo da API google books
+
+const bookName = document.getElementById('bookname');
+const authorName = document.getElementById('authorname');
+const searchBookButton = document.getElementById('searchbook');
+let infoBook = document.getElementById('infobook');
+
+
+// função que passa os dados de consulta para API
+async function consultaApi(){
+  
+  let termosPesq = concatWords()
+  console.log(termosPesq)
+
+  let url = `https://www.googleapis.com/books/v1/volumes?q=${termosPesq}+inauthor:&maxResults=5&key=${key}`
+
+  const response = await fetch(url);
+  const data = await response.json();  
+  console.log(data)
+
+  for(let i = 0; i < data.items.length; i++){
+    if (data.items[i].volumeInfo.hasOwnProperty('imageLinks') === false) {
+      data.items[i].volumeInfo.imageLinks = {thumbnail : './assets/covernotavailable.png'}
+  } else {
+      console.log('não existe')
+  }
+}
+
+  infoBook.innerHTML = `
+    
+
+  <div class="bookObject">
+    <div>
+      <a href=""><img src="${data.items[0].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+    </div>
+    <div id="bookdescription">
+      <p><span>Título: </span>${data.items[0].volumeInfo.title}</p>
+      <p><span>Autor: </span>${data.items[0].volumeInfo.authors}</p>
+      <p><span>Editora: </span>${data.items[0].volumeInfo.publisher}</p>
+      <p><span>Data da publicação: </span>${data.items[0].volumeInfo.publishedDate}</p>
+      <p><span>Gênero: </span>${data.items[0].volumeInfo.categories}</p>
+      <p><span>Descrição: </span>${data.items[0].volumeInfo.description}</p>
+    </div>
+  </div>
+
+  <div class="bookObject">
+    <div>
+      <a href=""><img src="${data.items[1].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+    </div>
+    <div id="bookdescription">
+      <p><span>Título: </span>${data.items[1].volumeInfo.title}</p>
+      <p><span>Autor: </span>${data.items[1].volumeInfo.authors}</p>
+      <p><span>Editora: </span>${data.items[1].volumeInfo.publisher}</p>
+      <p><span>Data da publicação: </span>${data.items[1].volumeInfo.publishedDate}</p>
+      <p><span>Gênero: </span>${data.items[1].volumeInfo.categories}</p>
+      <p><span>Descrição: </span>${data.items[1].volumeInfo.description}</p>
+    </div>
+  </div>
+
+  <div class="bookObject">
+    <div>
+      <a href=""><img src="${data.items[2].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+    </div>
+    <div id="bookdescription">
+      <p><span>Título: </span>${data.items[2].volumeInfo.title}</p>
+      <p><span>Autor: </span>${data.items[2].volumeInfo.authors}</p>
+      <p><span>Editora: </span>${data.items[2].volumeInfo.publisher}</p>
+      <p><span>Data da publicação: </span>${data.items[2].volumeInfo.publishedDate}</p>
+      <p><span>Gênero: </span>${data.items[2].volumeInfo.categories}</p>
+      <p><span>Descrição: </span>${data.items[2].volumeInfo.description}</p>
+    </div>
+  </div>
+
+  <div class="bookObject">
+    <div>
+      <a href=""><img src="${data.items[3].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+    </div>
+    <div id="bookdescription">
+      <p><span>Título: </span>${data.items[3].volumeInfo.title}</p>
+      <p><span>Autor: </span>${data.items[3].volumeInfo.authors}</p>
+      <p><span>Editora: </span>${data.items[3].volumeInfo.publisher}</p>
+      <p><span>Data da publicação: </span>${data.items[3].volumeInfo.publishedDate}</p>
+      <p><span>Gênero: </span>${data.items[3].volumeInfo.categories}</p>
+      <p><span>Descrição: </span>${data.items[3].volumeInfo.description}</p>
+    </div>
+  </div>
+
+  <div class="bookObject">
+    <div>
+      <a href=""><img src="${data.items[4].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+    </div>
+    <div id="bookdescription">
+      <p><span>Título: </span>${data.items[4].volumeInfo.title}</p>
+      <p><span>Autor: </span>${data.items[4].volumeInfo.authors}</p>
+      <p><span>Editora: </span>${data.items[4].volumeInfo.publisher}</p>
+      <p><span>Data da publicação: </span>${data.items[4].volumeInfo.publishedDate}</p>
+      <p><span>Gênero: </span>${data.items[4].volumeInfo.categories}</p>
+      <p><span>Descrição: </span>${data.items[4].volumeInfo.description}</p>
+    </div>
+  </div>    
+  `
+return data
+
+} 
+
+// função que trata os dados pesquisados no nome do livro
+function concatWords(){
+  const wordsSearch = bookName.value.split(' ').join('+')
+  return wordsSearch
+  
+}
+
+searchBookButton.addEventListener('click', consultaApi)
