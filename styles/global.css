@@ -30,6 +30,7 @@ body {
   font-size: 1.6rem;
   font-family: "Josefin Sans", sans-serif;
   
+  
 }
 
 /* Estilização header */
@@ -42,7 +43,7 @@ body {
   width: 85%;
   margin: 0 auto;
   padding: 2rem;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 main{
@@ -54,8 +55,7 @@ main input{
  text-align: center;
  width: 100%;
  padding: 1.5rem;
- font-size: 2rem;
- border-radius: 5rem;
+ font-size: 2rem; 
  border: 0.2px solid var(--color-header-footer-text);
 }
 
@@ -64,12 +64,66 @@ main input::placeholder{
   font-weight: 200;
 }
 
+#bookname{
+  width: 60%;
+  border-radius: 2rem 0 0 2rem;
+}
+
+#authorname{
+  width: 15%;
+}
+
 main h2{
   margin-top: 8rem;
-  margin-bottom: 16rem;
+  margin-bottom: 3rem;
   font-size: 6rem;
   font-weight: 200;
 }
+
+main button{
+ padding: 1.5rem;
+ font-size: 2rem; 
+ border: 0.2px solid var(--color-header-footer-text);
+ border-radius: 0 2rem 2rem 0;
+ cursor: pointer;
+ width: 5%;
+}
+
+#infobook{
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-header-footer-text);
+  border-radius: 2rem;
+  width: 40%;
+  margin: 0 auto;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+#infobook img{
+  border-radius: .5rem;
+}
+
+#infobook span{
+  font-weight: 500;
+}
+
+#bookdescription{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 30rem;
+  height: 25rem;
+  overflow-y: auto;
+  text-align: left;
+  padding: .2rem;
+}
+
 
 /* Estilização livros em alta */
 
