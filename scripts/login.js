@@ -1,8 +1,8 @@
 function handleLogin(event) {
   event.preventDefault();
 
-  var loginInput = document.getElementById("loginInput").value; // Corrected ID to "loginInput"
-  var passwordInput = document.getElementById("passwordInput").value; // Corrected ID to "passwordInput"
+  var loginInput = document.getElementById("loginInput").value;
+  var passwordInput = document.getElementById("passwordInput").value;
 
   var usersStorage = JSON.parse(localStorage.getItem("users")) || [];
 

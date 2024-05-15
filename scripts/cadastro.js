@@ -18,7 +18,7 @@ function handleSignup(event) {
   };
 
   try {
-    var users = JSON.parse(localStorage.getItem("users")) || []; // Ensure users is initialized as an array
+    var users = JSON.parse(localStorage.getItem("users")) || [];
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
     document.getElementById("signupForm").reset();
