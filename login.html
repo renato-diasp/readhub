@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <script src="./script.js" defer></script>
+  <script src="scripts/login.js" defer></script>
   <title>ReadHub</title>
 </head>
 <body>
@@ -28,12 +29,12 @@
   </header>
 
   <div class="container">
-    <!-- formulário de cadastro -->
+    <!-- formulário de login -->
     <section class="cadastro">
       <p>Login</p>
-      <input type="text" placeholder="email ou usuário">
-      <input type="password" placeholder="senha">
-      <button>Entrar</button>
+      <input type="text" id="loginInput" placeholder="email ou usuário">
+      <input type="password" id="passwordInput" placeholder="senha">
+      <button id="loginButton">Entrar</button>
     </section>
 
   </div>
@@ -42,5 +43,6 @@
     <img src="./assets/logo.png" alt="">
   </footer>
 
+  
 </body>
 </html>
