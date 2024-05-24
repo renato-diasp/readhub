@@ -1,0 +1,68 @@
+.textoVerde {
+    font-size: 4rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    color: #365A5A;
+}
+
+.botoesProduto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+button {
+    background-color: var(--color-header-footer-text);
+    color: var(--color-login);
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    border-radius: 3rem;
+    padding: 0.7rem 4.5rem;
+    width: 25%;
+    height: 25%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.conteudoPopup {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    border-radius: 10%;
+}
+
+.active {
+    display: flex;
+}
+
+.active .modal {
+    animation: modal .4s;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}

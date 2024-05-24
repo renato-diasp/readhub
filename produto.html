@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/produto.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="./script.js" defer></script>
+    <script src="scripts/produto.js" defer></script>
+    <title>ReadHub</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1><a href="./index.html"><img src="./assets/logo.png" alt="Imagem da logo ReadHub"></a></h1>
+        <nav>
+            <button id="switchButton" class="switch" onclick="toggleSwitch()">Explorador Reviews</button <a
+                href="./profile.html" style="color: #fff"> Avaliações</a>
+        </nav>
+        <div id="login">
+            <img src="./assets/profile.png" alt="Imagem de avatar do perfil">
+            <a href="#">Login</a>
+        </div>
+    </header>
+
+    <div id="conteudoLivroBotoes">
+        <img id=capaLivro src="./assets/capa1.jpg" alt="imagem de uma capa de livro">
+        <div class="textoVerde" id="tituloLivro">Nome do livro</div>
+        <div class="textoVerde" id="autorAnoLivro">Autor - 2024</div>
+        <div class="textoVerde" id="avaliacaoLivro">lorem ipsum </div>
+
+        <div class="botoesProduto">
+            <button id="addLido">Adicionar como lido</button>
+            <button id="addWishlist">Adicionar a Wishlist</button>
+            <button id="addComentario" onclick="addComentario()">Adicionar um comentário</button>
+        </div>
+    </div>
+    <div class="textoVerde" id="tituloCocmentario">Comentários ></div>
+    <div class="textoVerde" class="comentarios">
+        <img src="./assets/profile2.png">
+        <div class="usuarioComentario">super_leitor</div>
+        Esse livro mudou minha vida! recomendo a todos.
+    </div>
+
+    <div class="textoVerde" class="comentarios">
+        <img src="./assets/profile2.png">
+        <div class="usuarioComentario">amo.ler</div>
+        Prometeu muito e entregou! Adorei o livro.
+    </div>
+
+    <div class="textoVerde" class="comentarios">
+        <img src="./assets/profile2.png">
+        <div class="usuarioComentario">bookstan_</div>
+        Achei superestimado. Uma leitura legal, mas nada demais.
+    </div>
+
+    <div class="textoVerde" class="comentarioPopup">
+        <div class="Popup">
+            <h2>Adicionar Comentário</h2>
+            <hr />
+            <textarea id="commentText" placeholder="Digite seu comentário aqui..."></textarea>
+            <hr />
+            <div class="botoesPopup">
+            <button class="enviarComentario" onclick="enviarComentario()">Enviar</button>
+            <button class="enviarComentariofecharPopup" onclick="fecharPopup()">Fechar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
