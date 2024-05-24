@@ -5,6 +5,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 }
 
 #signupForm {
@@ -22,6 +23,7 @@ section p {
 }
 
 input {
+  width: 100%;
   padding: 1rem;
   border: 1px solid var(--color-header-footer-text);
   border-radius: 3rem;
@@ -34,7 +36,7 @@ input {
 button {
   background-color: var(--color-header-footer-text);
   color: var(--color-login);
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   border-radius: 3rem;
@@ -42,6 +44,7 @@ button {
   width: 60%;
   margin: 0 auto;
   margin-top: 3.5rem;
+  border-width: 0;
 }
 
 button:hover {
@@ -57,7 +60,24 @@ button:hover {
   color: red;
   font-weight: 300;
 }
-.containerButtons {
+#containerButtons {
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  justify-self: center;
+}
+
+#linkButton {
+  background-color: var(--color-header-footer-text);
+  color: var(--color-login);
+  font-size: 3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  border-radius: 3rem;
+  padding: 0.7rem 4.5rem;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+  text-decoration: none;
+  opacity: 0.7;
 }

@@ -10,12 +10,10 @@ function handleSignup(event) {
 
   var usersStorage = JSON.parse(localStorage.getItem("users")) || [];
 
-  // Check for existing email
   var checkEmail = usersStorage.find(function (userLogin) {
     return userLogin.email === email;
   });
 
-  // Check for existing username
   var checkUsername = usersStorage.find(function (userLogin) {
     return userLogin.username === username;
   });
@@ -45,8 +43,10 @@ function handleSignup(event) {
     usersStorage.push(user);
     localStorage.setItem("users", JSON.stringify(usersStorage));
     document.getElementById("signupForm").reset();
-    alert("Usuário cadastrado com sucesso!");
-    alert.innerHTML = "";
+    // alert("Usuário cadastrado com sucesso!");
+    // alert.innerHTML = "";
+    console.log("Redirecting to profile.html");
+    window.location.href = "./profile.html";
   } catch (error) {
     console.error("Error adding user:", error);
     alert(
