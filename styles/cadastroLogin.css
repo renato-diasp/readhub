@@ -57,3 +57,7 @@ button:hover {
   color: red;
   font-weight: 300;
 }
+.containerButtons {
+  display: flex;
+  flex-direction: row;
+}
