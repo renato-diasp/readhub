@@ -51,3 +51,9 @@ button:hover {
 .container {
   height: 100vh;
 }
+
+#alert p {
+  font-size: 22px;
+  color: red;
+  font-weight: 300;
+}

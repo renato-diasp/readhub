@@ -6,8 +6,32 @@ function handleSignup(event) {
   var password = document.getElementById("password").value;
   var confirmPassword = document.getElementById("confirmPassword").value;
 
+  var alert = document.getElementById("alert");
+
+  var usersStorage = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Check for existing email
+  var checkEmail = usersStorage.find(function (userLogin) {
+    return userLogin.email === email;
+  });
+
+  // Check for existing username
+  var checkUsername = usersStorage.find(function (userLogin) {
+    return userLogin.username === username;
+  });
+
+  if (checkEmail) {
+    alert.innerHTML = "<p> Email já cadastrado </p>";
+    return;
+  }
+
+  if (checkUsername) {
+    alert.innerHTML = "<p> Nome de usuário já cadastrado </p>";
+    return;
+  }
+
   if (password !== confirmPassword) {
-    alert("As senhas não coincidem.");
+    alert.innerHTML = "<p> As senhas não são iguais </p>";
     return;
   }
 
@@ -18,10 +42,11 @@ function handleSignup(event) {
   };
 
   try {
-    var users = JSON.parse(localStorage.getItem("users")) || [];
-    users.push(user);
-    localStorage.setItem("users", JSON.stringify(users));
+    usersStorage.push(user);
+    localStorage.setItem("users", JSON.stringify(usersStorage));
     document.getElementById("signupForm").reset();
+    alert("Usuário cadastrado com sucesso!");
+    alert.innerHTML = "";
   } catch (error) {
     console.error("Error adding user:", error);
     alert(
