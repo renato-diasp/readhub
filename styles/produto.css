@@ -1,3 +1,47 @@
+#conteudoLivroBotoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centraliza verticalmente os botões */
+    padding: 5rem;
+}
+
+.infoLivro {
+    display: flex;
+    align-items: flex-start; /* Alinha ao topo */
+}
+
+#capaLivro {
+    width: 200px; /* Ajuste conforme necessário */
+    margin-right: 20px;
+}
+
+.detalhesLivro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha ao topo */
+}
+
+.botoesProduto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100%; /* Garante que os botões ocupem a altura total */
+}
+
+button {
+    background-color: var(--color-header-footer-text);
+    color: var(--color-login);
+    font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    border-radius: 3rem;
+    padding: 1.5rem 4.5rem; /* Aumenta a altura dos botões */
+    width: 100%; /* Ajuste conforme necessário */
+    margin-bottom: 1rem; /* Aumenta o espaço entre os botões */
+    border: 0;
+    cursor: pointer;
+}
+
 .textoVerde {
     font-size: 4rem;
     font-family: "Josefin Sans", sans-serif;
@@ -5,29 +49,37 @@
     color: #365A5A;
 }
 
-.botoesProduto {
+.comentario {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    color: #365A5A;
+    background-color: #E8E8E8;
+    padding: 1%;
+}
+
+.fotoPerfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.conteudoComentario {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 }
 
-button {
-    background-color: var(--color-header-footer-text);
-    color: var(--color-login);
+.usuarioComentario {
     font-size: 2rem;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 400;
-    border-radius: 3rem;
-    padding: 0.7rem 4.5rem;
-    width: 25%;
-    height: 25%;
-    margin: 0 auto;
-    margin-top: 0.5rem;
-    border: 0;
-    cursor: pointer;
+    font-weight: 500;
 }
 
-.popup {
+.textoComentario {
+    font-size: 1.5rem;
+}
+
+.comentarioPopup {
     display: none;
     position: fixed;
     z-index: 1;
@@ -36,7 +88,6 @@ button {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -48,15 +99,11 @@ button {
     width: 80%;
     max-width: 500px;
     position: relative;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 .active {
-    display: flex;
-}
-
-.active .modal {
-    animation: modal .4s;
+    display: block;
 }
 
 textarea {
@@ -65,4 +112,24 @@ textarea {
     margin-bottom: 20px;
     padding: 10px;
     box-sizing: border-box;
+}
+
+#avaliacaoLivro {
+    font-size: 3rem;
+}
+
+#tituloLivro {
+    font-size: 7rem;
+}
+
+#autorAnoLivro {
+    font-size: 5rem;
+}
+
+#sectionComentarios {
+    padding: 5rem;
+}
+
+#tituloComentario {
+    margin-bottom: 2rem;
 }
