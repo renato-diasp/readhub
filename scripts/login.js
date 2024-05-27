@@ -11,7 +11,15 @@ function handleLogin(event) {
   });
 
   if (foundUser && foundUser.password === passwordInput) {
-    alert("Login efetuado.");
+    // alert("Login efetuado.");
+
+    localStorage.removeItem("loggedInUser");
+    localStorage.setItem(
+      "loggedInUser",
+      JSON.stringify({ email: foundUser.email })
+    );
+
+    window.location.href = "profile.html";
   } else {
     alert(
       "Credenciais inválidas. Por favor, verifique o seu email/usuário e senha."

@@ -43,9 +43,8 @@ function handleSignup(event) {
     usersStorage.push(user);
     localStorage.setItem("users", JSON.stringify(usersStorage));
     document.getElementById("signupForm").reset();
-    // alert("Usuário cadastrado com sucesso!");
-    // alert.innerHTML = "";
-    console.log("Redirecting to profile.html");
+    localStorage.removeItem("loggedInUser");
+    localStorage.setItem("loggedInUser", JSON.stringify({ email: user.email }));
     window.location.href = "./profile.html";
   } catch (error) {
     console.error("Error adding user:", error);
