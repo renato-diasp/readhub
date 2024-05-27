@@ -6,6 +6,8 @@ function handleLogin(event) {
 
   var usersStorage = JSON.parse(localStorage.getItem("users")) || [];
 
+  var alert = document.getElementById("alert");
+
   var foundUser = usersStorage.find(function (userLogin) {
     return userLogin.email === loginInput || userLogin.username === loginInput;
   });
@@ -21,9 +23,7 @@ function handleLogin(event) {
 
     window.location.href = "profile.html";
   } else {
-    alert(
-      "Credenciais inválidas. Por favor, verifique o seu email/usuário e senha."
-    );
+    alert.innerHTML = "<p> Usuário ou senha incorretos </p>";
   }
 }
 
