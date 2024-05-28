@@ -10,11 +10,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <script src="./script.js" defer></script>
+  <script defer src="/scripts/data-sheet.js"></script>
   <title>ReadHub - Profile</title>
 <body>
     <!-- Cabeçalho -->
   <header>
     <h1><a href="./index.html"><img src="./assets/logo.png" alt="Imagem da logo ReadHub"></a></h1>
+    <nav id="toggleMenu">
+      <a class="buttontoggle" id="buttonUnselected" href="index.html">Explorador</a>
+      <a class="buttontoggle" id="buttonSelected" href="./indexReviews.html"> Avaliações</a>
+    </nav>
     <div id="login">
       <img src="./assets/profile.png" alt="Imagem de avatar do perfil">
       <a href="./login.html">Login</a>
@@ -25,75 +30,9 @@
     <!-- parte principal / busca de livros -->
     <main>
       <input type="text" name="" id="" placeholder="Nome do livro..."> 
+      <div id="reviews"></div>
       
-      <section>
-        <div class="infobook">
-            <p>titulo_livro</p>
-            <img src="./assets/star-fill.svg" alt="">
-            <img src="./assets/star-fill.svg" alt="">
-            <img src="./assets/star-fill.svg" alt="">
-            <img src="./assets/star.svg" alt="">            
-            <img src="./assets/star.svg" alt="">            
-            <div class="bookimage">
-                <img src="./assets/capa1.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="avaliacao">
-            <div class="titledescription">
-                <img src="./assets/profile2.png" alt="">
-                <p>super_leitor</p>
-            </div>            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repudiandae libero nostrum esse asperiores perferendis dolorum laudantium atque tempore, mollitia nobis inventore perspiciatis quia expedita quos veritatis voluptates qui ab!</p>
-        </div>
-
-      </section>
-
-      <section>
-        <div class="infobook">
-            <p>titulo_livro</p>
-            <img src="./assets/star-fill.svg" alt="">
-            <img src="./assets/star-fill.svg" alt="">
-            <img src="./assets/star-fill.svg" alt="">
-            <img src="./assets/star.svg" alt="">            
-            <img src="./assets/star.svg" alt="">            
-            <div class="bookimage">
-                <img src="./assets/capa1.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="avaliacao">
-            <div class="titledescription">
-                <img src="./assets/profile2.png" alt="">
-                <p>super_leitor2</p>
-            </div>            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repudiandae libero nostrum esse asperiores perferendis dolorum laudantium atque tempore, mollitia nobis inventore perspiciatis quia expedita quos veritatis voluptates qui ab!</p>
-        </div>
-
-      </section>
-
-      <section>
-        <div class="infobook">
-            <p>titulo_livro</p>
-            <img src="./assets/star-fill.svg" alt="">
-            <img src="./assets/star-fill.svg" alt="">
-            <img src="./assets/star-fill.svg" alt="">
-            <img src="./assets/star.svg" alt="">            
-            <img src="./assets/star.svg" alt="">            
-            <div class="bookimage">
-                <img src="./assets/capa1.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="avaliacao">
-            <div class="titledescription">
-                <img src="./assets/profile2.png" alt="">
-                <p>super_leitor3</p>
-            </div>            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repudiandae libero nostrum esse asperiores perferendis dolorum laudantium atque tempore, mollitia nobis inventore perspiciatis quia expedita quos veritatis voluptates qui ab!</p>
-        </div>
-
-      </section>
+     
     </main>
 
 

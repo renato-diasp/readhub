@@ -1,11 +1,11 @@
 /* Importação das fontes e estilos */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 @import url(./header.css);
 @import url(./footer.css);
 
 /* Configurações gerais */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,83 +19,76 @@
 
   /* cores da página */
 
-  --color-header-footer-text: #365A5A;
+  --color-header-footer-text: #365a5a;
   --color-login: #fff;
-
 }
-
-
 
 body {
   font-size: 1.6rem;
   font-family: "Josefin Sans", sans-serif;
-  
-  
 }
 
 /* Estilização header */
 
-
-
 /* Estilização main */
 
-.container{
+.container {
   width: 85%;
   margin: 0 auto;
   padding: 2rem;
   /* height: 100vh; */
 }
 
-main{
+main {
   text-align: center;
-  margin-top: 2rem; 
+  margin-top: 2rem;
 }
 
-main input{
- text-align: center;
- width: 100%;
- padding: 1.5rem;
- font-size: 2rem; 
- border: 0.2px solid var(--color-header-footer-text);
+main input {
+  text-align: center;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  border: 0.2px solid var(--color-header-footer-text);
 }
 
-main input::placeholder{
+main input::placeholder {
   font-size: 2rem;
   font-weight: 200;
 }
 
-#bookname{
+#bookname {
   width: 60%;
   border-radius: 2rem 0 0 2rem;
 }
 
-#authorname{
+#authorname {
   width: 15%;
 }
 
-main h2{
+main h2 {
   margin-top: 8rem;
   margin-bottom: 3rem;
   font-size: 6rem;
   font-weight: 200;
 }
 
-main button{
- padding: 1.5rem;
- font-size: 2rem; 
- border: 0.2px solid var(--color-header-footer-text);
- border-radius: 0 2rem 2rem 0;
- cursor: pointer;
- width: 5%;
+main button {
+  padding: 1.5rem;
+  font-size: 2rem;
+  border: 0.2px solid var(--color-header-footer-text);
+  border-radius: 0 2rem 2rem 0;
+  cursor: pointer;
+  width: 5%;
 }
 
-#infobook{
+#infobook {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
 }
 
-.bookObject{
+.bookObject {
   display: flex;
   gap: 5rem;
   justify-content: center;
@@ -110,19 +103,19 @@ main button{
   font-weight: 300;
 }
 
-.bookObject img{
-  border-radius: .5rem;  
+.bookObject img {
+  border-radius: 0.5rem;
 }
 
-.bookObject p{
+.bookObject p {
   line-height: 2.5rem;
 }
 
-.bookObject span{
+.bookObject span {
   font-weight: 500;
 }
 
-#bookdescription{
+#bookdescription {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
@@ -130,36 +123,48 @@ main button{
   height: 25rem;
   overflow-y: auto;
   text-align: left;
-  padding: .2rem;
+  padding: 0.2rem;
   font-size: 2rem;
 }
 
+#ver-mais {
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  margin: 0 auto;
+
+  background-color: var(--color-header-footer-text);
+  color: var(--color-login);
+  font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  border-radius: 3rem;
+  margin-top: 1rem;
+}
 
 /* Estilização livros em alta */
 
-section p{
+section p {
   font-size: 4rem;
   font-weight: 200;
   margin-bottom: 6.5rem;
 }
 
-.card{
+.card {
   display: flex;
-  column-gap: 2.5rem; 
-  
+  column-gap: 2.5rem;
 }
 
-.card img{
+.card img {
   width: auto;
   aspect-ratio: 9/10;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
-#categories{
+#categories {
   margin-top: 12rem;
 }
 
-#categories > div{
- margin-bottom: 2rem;
+#categories > div {
+  margin-bottom: 2rem;
 }
-

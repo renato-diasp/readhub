@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/global.css">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/profile.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/profile.js" defer></script>
+    <title>ReadHub</title>
+  </head>
 
-  <script src="scripts/script.js" defer></script>
-  <script src="scripts/profile.js" defer></script>
-  <title>ReadHub</title>
-</head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <h1>
+        <a href="index.html"
+          ><img src="assets/logo.png" alt="Imagem da logo ReadHub"
+        /></a>
+      </h1>
+      <nav>
+        <button id="switchButton" class="switch" onclick="toggleSwitch()">
+          Explorador Reviews
+        </button>
+        <a href="profile.html" style="color: #fff"> Avaliações</a>
+      </nav>
+      <div id="login">
+        <img src="assets/profile.png" alt="Imagem de avatar do perfil" />
+        <a href="login.html">Login</a>
+      </div>
+    </header>
 
-<body>
-  <!-- Cabeçalho -->
-  <header>
-    <h1><a href="index.html"><img src="assets/logo.png" alt="Imagem da logo ReadHub"></a></h1>
-    <nav>
-      <button id="switchButton" class="switch" onclick="toggleSwitch()">Explorador Reviews</button>
-      <a href="profile.html" style="color: #fff"> Avaliações</a>
-    </nav>
-    <div id="login">
-      <img src="assets/profile.png" alt="Imagem de avatar do perfil">
-      <a href="#">Login</a>
-    </div>
-  </header>
+    <main class="textoVerde">
+      <aside>
+        <img
+          src="assets/profile2.png"
+          alt="foto de perfil do usuário"
+          class="fotoPerfil"
+        />
+        <div id="nomeUsuario">leitor_coder</div>
+        <div id="qtdLivrosLidos">X livros lidos</div>
+        <div id="bio">Sobre mim aaaaaaaaaaaaaa</div>
+      </aside>
 
-  <main class="textoVerde">
-    <aside>
-      <img src="assets/profile2.png" alt="foto de perfil do usuário" class="fotoPerfil">
-      <div id="nomeUsuario">leitor_coder</div>
-      <div id="qtdLivrosLidos">X livros lidos</div>
-      <div id="bio">Sobre mim aaaaaaaaaaaaaa</div>
-    </aside>
-
-    <div id="livrosLidos" class="box-container">
-      <div class="main-box">
-        <div class="tituloBox">Livros lidos</div>
-        <div class="row">
-          <div class="box">
-            <img src="assets/capa2.jpg" alt="imagem de uma capa de livro">
+      <div id="livrosLidos" class="box-container">
+        <div class="main-box">
+          <div class="tituloBox">Livros lidos</div>
+          <div class="row">
+            <div class="box">
+              <img src="assets/capa2.jpg" alt="imagem de uma capa de livro" />
+            </div>
+            <div class="box">
+              <img src="assets/capa3.jpg" alt="imagem de uma capa de livro" />
+            </div>
           </div>
-          <div class="box">
-            <img src="assets/capa3.jpg" alt="imagem de uma capa de livro">
+          <div class="row">
+            <div class="box">
+              <img src="assets/capa4.jpg" alt="imagem de uma capa de livro" />
+            </div>
+            <div class="box">
+              <img src="assets/capa5.jpg" alt="imagem de uma capa de livro" />
+            </div>
           </div>
+<<<<<<< HEAD
         </div>
         <div class="row">
           <div class="box">
@@ -54,21 +76,39 @@
           </div>
           <div class="box">
             <img src="assets/capa5.jpg" alt="imagem de uma capa de livro">
+=======
+          <div class="row">
+            <div class="box">
+              <img src="assets/capa6.jpg" alt="imagem de uma capa de livro" />
+            </div>
+            <div class="box">
+              <img src="assets/capa7.jpg" alt="imagem de uma capa de livro" />
+            </div>
+>>>>>>> e5324e3b055ae7ba136fae2d2448ea84643e3179
           </div>
         </div>
       </div>
-    </div>
 
-    <div id="WishList" class="box-container">
-      <div class="main-box">
-        <div class="tituloBox">WishList</div>
-        <div class="row">
-          <div class="box">
-            <img src="assets/capa8.jpg" alt="imagem de uma capa de livro">
+      <div id="WishList" class="box-container">
+        <div class="main-box">
+          <div class="tituloBox">WishList</div>
+          <div class="row">
+            <div class="box">
+              <img src="assets/capa8.jpg" alt="imagem de uma capa de livro" />
+            </div>
+            <div class="box">
+              <img src="assets/capa9.jpg" alt="imagem de uma capa de livro" />
+            </div>
           </div>
-          <div class="box">
-            <img src="assets/capa9.jpg" alt="imagem de uma capa de livro">
+          <div class="row">
+            <div class="box">
+              <img src="assets/capa10.jpg" alt="imagem de uma capa de livro" />
+            </div>
+            <div class="box">
+              <img src="assets/capa11.jpg" alt="imagem de uma capa de livro" />
+            </div>
           </div>
+<<<<<<< HEAD
         </div>
         <div class="row">
           <div class="box">
@@ -86,4 +126,18 @@
   </footer>
 </body>
 
+=======
+          <div class="row">
+            <div class="box">
+              <img src="assets/capa12.jpg" alt="imagem de uma capa de livro" />
+            </div>
+            <div class="box">
+              <img src="assets/capa13.jpg" alt="imagem de uma capa de livro" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+>>>>>>> e5324e3b055ae7ba136fae2d2448ea84643e3179
 </html>

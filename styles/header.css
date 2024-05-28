@@ -1,35 +1,34 @@
-header{
-    background-color: var(--color-header-footer-text);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    padding: 1.5rem ;
-  }
-  
-  header > h1 a img{
-    width: 25rem;
-  }
-  
-  #login{
-    display: flex;
-    align-items: center;
-    
-  }
-  
-  #login a {
-    font-size: 4rem;
-    text-decoration: none;
-    color: var(--color-login);
-    margin-top: 2rem;
-  }
+header {
+  background-color: var(--color-header-footer-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  /*estilização do botão switch */
+  padding: 1.5rem;
+}
 
-  .switch {
+header > h1 a img {
+  width: 25rem;
+}
+
+#login {
+  display: flex;
+  align-items: center;
+}
+
+#login a {
+  font-size: 4rem;
+  text-decoration: none;
+  color: var(--color-login);
+  margin-top: 2rem;
+}
+
+/*estilização do botão switch */
+
+.switch {
   background-color: #ffffff;
   border: none;
-  color: #365A5A;
+  color: #365a5a;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -41,9 +40,34 @@ header{
 }
 
 .switch.on {
-  background-color: #95BFBE; /* cor quando estiver ligado */
+  background-color: #95bfbe; /* cor quando estiver ligado */
 }
 
 .switch.off {
-  background-color: #95BFBE; /* cor quando estiver desligado */
+  background-color: #95bfbe; /* cor quando estiver desligado */
+}
+
+#toggleMenu {
+  color: #365a5a;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 30px;
+}
+
+.buttontoggle {
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  margin: 2px;
+}
+
+#buttonSelected {
+  color: white;
+  background-color: #365a5a;
+  border-radius: 20px;
+}
+
+#buttonUnselected {
+  color: #365a5a;
 }
