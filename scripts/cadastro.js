@@ -45,6 +45,7 @@ function handleSignup(event) {
     username: username,
     password: password,
     wishlist: [],
+    livrosLidos: [],
   };
 
   // armazena informações no local storage
