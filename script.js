@@ -33,7 +33,10 @@ async function consultaApi(){
   let termosPesq = concatWords()
   console.log(termosPesq)
 
-  let url = `https://www.googleapis.com/books/v1/volumes?q=${termosPesq}+inauthor:&maxResults=5&key=${key}`
+  let authorPesq = concatAuthorName()
+  
+
+  let url = `https://www.googleapis.com/books/v1/volumes?q=${termosPesq}+inauthor:${authorPesq}&maxResults=5&key=${key}`
 
   const response = await fetch(url);
   const data = await response.json();  
@@ -129,10 +132,16 @@ return data
 
 } 
 
-// função que trata os dados pesquisados no nome do livro
+// funções que tratam os dados pesquisados no nome do livro e autor
 function concatWords(){
   const wordsSearch = bookName.value.split(' ').join('+')
   return wordsSearch
+  
+}
+
+function concatAuthorName(){
+  const nameAuthor = authorName.value.split(' ').join('+')
+  return nameAuthor
   
 }
 
