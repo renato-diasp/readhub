@@ -23,6 +23,7 @@ function toggleSwitch() {
 const bookName = document.getElementById('bookname');
 const authorName = document.getElementById('authorname');
 const searchBookButton = document.getElementById('searchbook');
+const btnViewMore = document.getElementById('ver-mais') 
 let infoBook = document.getElementById('infobook');
 
 
@@ -46,12 +47,12 @@ async function consultaApi(){
   }
 }
 
-  infoBook.innerHTML = `
-    
+  infoBook.innerHTML = `    
 
   <div class="bookObject">
     <div>
       <a href=""><img src="${data.items[0].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+      <a href="./produto.html"><button id="ver-mais">Ver mais</button></a>
     </div>
     <div id="bookdescription">
       <p><span>Título: </span>${data.items[0].volumeInfo.title}</p>
@@ -59,6 +60,7 @@ async function consultaApi(){
       <p><span>Editora: </span>${data.items[0].volumeInfo.publisher}</p>
       <p><span>Data da publicação: </span>${data.items[0].volumeInfo.publishedDate}</p>
       <p><span>Gênero: </span>${data.items[0].volumeInfo.categories}</p>
+      <a href="./produto.html"><button id="ver-mais">Ver mais</button></a>
       <p><span>Descrição: </span>${data.items[0].volumeInfo.description}</p>
     </div>
   </div>
@@ -66,6 +68,7 @@ async function consultaApi(){
   <div class="bookObject">
     <div>
       <a href=""><img src="${data.items[1].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+      <a href="./produto.html"><button id="ver-mais">Ver mais</button></a>
     </div>
     <div id="bookdescription">
       <p><span>Título: </span>${data.items[1].volumeInfo.title}</p>
@@ -80,6 +83,7 @@ async function consultaApi(){
   <div class="bookObject">
     <div>
       <a href=""><img src="${data.items[2].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+      <a href="./produto.html"><button id="ver-mais">Ver mais</button></a>
     </div>
     <div id="bookdescription">
       <p><span>Título: </span>${data.items[2].volumeInfo.title}</p>
@@ -94,6 +98,7 @@ async function consultaApi(){
   <div class="bookObject">
     <div>
       <a href=""><img src="${data.items[3].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+      <a href="./produto.html"><button id="ver-mais">Ver mais</button></a>
     </div>
     <div id="bookdescription">
       <p><span>Título: </span>${data.items[3].volumeInfo.title}</p>
@@ -108,6 +113,7 @@ async function consultaApi(){
   <div class="bookObject">
     <div>
       <a href=""><img src="${data.items[4].volumeInfo.imageLinks.thumbnail}" alt="Foto de capa do livro não disponível"></a>
+      <a href="./produto.html"><button id="ver-mais">Ver mais</button></a>
     </div>
     <div id="bookdescription">
       <p><span>Título: </span>${data.items[4].volumeInfo.title}</p>
