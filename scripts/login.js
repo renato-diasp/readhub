@@ -33,7 +33,7 @@ function handleLogin(event) {
 
     // Redirect to index.html after a short delay
     setTimeout(function () {
-      window.location.href = "index.html";
+      window.location.href = "indexReviews.html";
     }, 500); // 1000 milliseconds = 1 second
   } else {
     alertDiv.innerHTML = "<p>Usuário ou senha incorretos</p>";

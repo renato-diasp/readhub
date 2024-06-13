@@ -62,13 +62,13 @@ header > h1 a img {
   margin: 2px;
 }
 
-#buttonSelected {
+.buttonSelected {
   color: white;
   background-color: #365a5a;
   border-radius: 20px;
 }
 
-#buttonUnselected {
+.buttonUnselected {
   color: #365a5a;
 }
 

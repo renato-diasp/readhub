@@ -51,3 +51,13 @@ function checkLoginStatus() {
     }
   }
 }
+
+let btReview = document.getElementById("bt-reviews");
+btReview.addEventListener("click", function () {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn === "true" && loggedInUser) {
+    btReview.href = "indexReviews.html";
+  } else {
+    btReview.href = "login.html";
+  }
+});
