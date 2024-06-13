@@ -168,3 +168,8 @@ section p {
 #categories > div {
   margin-bottom: 2rem;
 }
+
+.swal2-confirm.custom-button {
+  background-color: #365a5a; /* Red background */
+  color: #fff; /* White text color */
+}

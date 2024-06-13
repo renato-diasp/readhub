@@ -15,7 +15,14 @@ function enviarComentario() {
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const isLoggedIn = localStorage.getItem("isLoggedIn");
   if (isLoggedIn !== "true" || !loggedInUser) {
-    alert("Você precisa estar logado para comentar.");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Você tem que estar logado para comentar",
+      customClass: {
+        confirmButton: "custom-button",
+      },
+    });
     fecharPopup();
     return;
   }

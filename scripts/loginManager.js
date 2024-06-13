@@ -23,9 +23,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 function logout() {
   localStorage.setItem("isLoggedIn", "false");
+  const currentURL = window.location.href;
+
+  Swal.fire({
+    position: "center",
+    title: "Você foi deslogado",
+    showConfirmButton: false,
+    timer: 2000,
+    customClass: {
+      confirmButton: "custom-button",
+    },
+  });
+
+  if (currentURL.includes("indexReviews.html")) {
+    setTimeout(function () {
+      window.location.href = "index.html";
+    }, 2000);
+  } else {
+  }
   checkLoginStatus();
 }
 
+//checa o login
 function checkLoginStatus() {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -52,6 +71,7 @@ function checkLoginStatus() {
   }
 }
 
+//botao de avaliações dos amigos
 let btReview = document.getElementById("bt-reviews");
 btReview.addEventListener("click", function () {
   const isLoggedIn = localStorage.getItem("isLoggedIn");

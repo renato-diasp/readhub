@@ -29,12 +29,22 @@ function handleLogin(event) {
     console.log("efetuou");
 
     // Show success alert
-    alert("Login efetuado com sucesso");
+    // alert("Login efetuado com sucesso");
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Login efetuado com sucesso",
+      showConfirmButton: false,
+      timer: 1500,
+      customClass: {
+        confirmButton: "custom-button",
+      },
+    });
 
     // Redirect to index.html after a short delay
     setTimeout(function () {
       window.location.href = "indexReviews.html";
-    }, 500); // 1000 milliseconds = 1 second
+    }, 1500); // 1000 milliseconds = 1 second
   } else {
     alertDiv.innerHTML = "<p>Usuário ou senha incorretos</p>";
   }
