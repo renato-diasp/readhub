@@ -71,3 +71,28 @@ header > h1 a img {
 #buttonUnselected {
   color: #365a5a;
 }
+
+.menu {
+  /* display: none; */
+  position: absolute;
+  right: 0;
+  top: 100px;
+  background-color: #365a5a;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 150px;
+}
+
+.menu a {
+  padding: 15px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu a:hover {
+  background-color: #1f3131;
+}
+
+.hidden {
+  display: none;
+}

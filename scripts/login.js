@@ -9,7 +9,7 @@ function handleLogin(event) {
   var usersStorage = JSON.parse(localStorage.getItem("users")) || [];
 
   // acesso a uma div do html que gerará uma resposta em innerHTML de sucesso de login ou nao para o usuário
-  var alert = document.getElementById("alert");
+  var alertDiv = document.getElementById("alert");
 
   // busca do usuário no local storage
   var foundUser = usersStorage.find(function (userLogin) {
@@ -18,16 +18,25 @@ function handleLogin(event) {
 
   // checa se a senha está correta e efetua o login
   if (foundUser && foundUser.password === passwordInput) {
-    // adiciona o usuário que fez o login em uma outra chave do local sotorage
+    // adiciona o usuário que fez o login em uma outra chave do local storage
     localStorage.removeItem("loggedInUser");
     localStorage.setItem(
       "loggedInUser",
       JSON.stringify({ email: foundUser.email })
     );
-    // vai para a página de login
-    window.location.href = "profile.html";
+
+    localStorage.setItem("isLoggedIn", "true");
+    console.log("efetuou");
+
+    // Show success alert
+    alert("Login efetuado com sucesso");
+
+    // Redirect to index.html after a short delay
+    setTimeout(function () {
+      window.location.href = "index.html";
+    }, 500); // 1000 milliseconds = 1 second
   } else {
-    alert.innerHTML = "<p> Usuário ou senha incorretos </p>";
+    alertDiv.innerHTML = "<p>Usuário ou senha incorretos</p>";
   }
 }
 

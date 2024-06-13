@@ -14,6 +14,7 @@
 
     <script src="scripts/script.js" defer></script>
     <script src="scripts/profile.js" defer></script>
+    <script defer src="scripts/loginManager.js"></script>
     <title>ReadHub</title>
   </head>
 
@@ -28,7 +29,11 @@
 
       <div id="login">
         <img src="./assets/profile.png" alt="Imagem de avatar do perfil" />
-        <a href="#">Login</a>
+        <a id="login-header" href="javascript:void(0);">Login</a>
+        <div id="menu" class="menu hidden">
+          <a href="./profile.html">Perfil</a>
+          <a href="javascript:void(0);" onclick="logout()">Logout</a>
+        </div>
       </div>
     </header>
 
@@ -89,7 +94,7 @@
       </div>
     </main>
     <footer>
-    <img src="./assets/logo.png" alt="">
-  </footer>
+      <img src="./assets/logo.png" alt="" />
+    </footer>
   </body>
 </html>

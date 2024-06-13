@@ -11,6 +11,7 @@
 
   <script src="./script.js" defer></script>
   <script defer src="/scripts/data-sheet.js"></script>
+  <script defer src="scripts/loginManager.js"></script>
   <title>ReadHub - Profile</title>
 <body>
     <!-- Cabeçalho -->
@@ -22,7 +23,11 @@
     </nav>
     <div id="login">
       <img src="./assets/profile.png" alt="Imagem de avatar do perfil">
-      <a href="./login.html">Login</a>
+      <a id="login-header" href="javascript:void(0);">Login</a>
+      <div id="menu" class="menu hidden">
+        <a href="./profile.html">Perfil</a>
+        <a href="javascript:void(0);" onclick="logout()">Logout</a>
+      </div>
     </div>
   </header>
 
