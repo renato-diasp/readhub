@@ -45,8 +45,28 @@ function handleSignup(event) {
     localStorage.setItem("users", JSON.stringify(usersStorage));
     document.getElementById("signupForm").reset();
     localStorage.removeItem("loggedInUser");
-    localStorage.setItem("loggedInUser", JSON.stringify({ email: user.email, username: user.username }));
-    window.location.href = "./profile.html";
+    localStorage.setItem(
+      "loggedInUser",
+      JSON.stringify({ email: user.email, username: user.username })
+    );
+
+    localStorage.setItem("isLoggedIn", "true");
+
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Cadastro efetuado com sucesso",
+      showConfirmButton: false,
+      timer: 1500,
+      customClass: {
+        confirmButton: "custom-button",
+      },
+    });
+
+    // Redirect to index.html after a short delay
+    setTimeout(function () {
+      window.location.href = "indexReviews.html";
+    }, 1500); // 1000 milliseconds = 1 second
   } catch (error) {
     console.error("Error adding user:", error);
     alert(

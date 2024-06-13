@@ -26,7 +26,6 @@ function handleLogin(event) {
     );
 
     localStorage.setItem("isLoggedIn", "true");
-    console.log("efetuou");
 
     // Show success alert
     // alert("Login efetuado com sucesso");
