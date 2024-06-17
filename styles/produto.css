@@ -1,135 +1,136 @@
 #conteudoLivroBotoes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Centraliza verticalmente os botões */
-    padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Centraliza verticalmente os botões */
+  padding: 5rem;
 }
 
 .infoLivro {
-    display: flex;
-    align-items: flex-start; /* Alinha ao topo */
+  display: flex;
+  align-items: flex-start; /* Alinha ao topo */
 }
 
 #capaLivro {
-    width: 200px; /* Ajuste conforme necessário */
-    margin-right: 20px;
+  width: 200px; /* Ajuste conforme necessário */
+  margin-right: 20px;
 }
 
 .detalhesLivro {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Alinha ao topo */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha ao topo */
 }
 
 .botoesProduto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    height: 100%; /* Garante que os botões ocupem a altura total */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  height: 100%;
 }
 
 button {
-    background-color: var(--color-header-footer-text);
-    color: var(--color-login);
-    font-size: 2.5rem; /* Aumenta o tamanho da fonte */
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 400;
-    border-radius: 3rem;
-    padding: 1.5rem 4.5rem; /* Aumenta a altura dos botões */
-    width: 100%; /* Ajuste conforme necessário */
-    margin-bottom: 1rem; /* Aumenta o espaço entre os botões */
-    border: 0;
-    cursor: pointer;
+  background-color: var(--color-header-footer-text);
+  color: var(--color-login);
+  font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  border-radius: 3rem;
+  padding: 1.5rem 4.5rem; /* Aumenta a altura dos botões */
+  width: 100%; /* Ajuste conforme necessário */
+  margin-bottom: 1rem; /* Aumenta o espaço entre os botões */
+  border: 0;
+  cursor: pointer;
 }
 
 .textoVerde {
-    font-size: 4rem;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 300;
-    color: #365A5A;
+  font-size: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: #365a5a;
 }
 
 .comentario {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    color: #365A5A;
-    background-color: #E8E8E8;
-    padding: 1%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  color: #365a5a;
+  background-color: #e8e8e8;
+  padding: 1%;
 }
 
 .fotoPerfil {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .conteudoComentario {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .usuarioComentario {
-    font-size: 2rem;
-    font-weight: 500;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .textoComentario {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .comentarioPopup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .conteudoPopup {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    position: relative;
-    border-radius: 10px;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  border-radius: 10px;
 }
 
 .active {
-    display: block;
+  display: block;
 }
 
 textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 20px;
-    padding: 10px;
-    box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 #avaliacaoLivro {
-    font-size: 3rem;
+  font-size: 3rem;
+  width: 80%;
 }
 
 #tituloLivro {
-    font-size: 7rem;
+  font-size: 7rem;
 }
 
 #autorAnoLivro {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 #sectionComentarios {
-    padding: 5rem;
+  padding: 5rem;
 }
 
 #tituloComentario {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }

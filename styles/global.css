@@ -115,7 +115,7 @@ main button {
   font-weight: 500;
 }
 
-#bookdescription {
+.bookdescription {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
@@ -127,7 +127,7 @@ main button {
   font-size: 2rem;
 }
 
-#ver-mais {
+.ver-mais {
   width: 90%;
   padding: 0.5rem;
   border-radius: 0.4rem;

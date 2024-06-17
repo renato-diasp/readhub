@@ -59,3 +59,46 @@ function enviarComentario() {
     fecharPopup(); // Fecha o popup
   }
 }
+
+// Function to get query parameters
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+// Function to fetch book details by ID
+async function fetchBookDetails(bookId) {
+  const url = `https://www.googleapis.com/books/v1/volumes/${bookId}?key=${key}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
+
+// Function to display book details
+function displayBookDetails(book) {
+  const capaLivro = document.getElementById("capaLivro");
+  const tituloLivro = document.getElementById("tituloLivro");
+  const autorAnoLivro = document.getElementById("autorAnoLivro");
+  const avaliacaoLivro = document.getElementById("avaliacaoLivro");
+
+  capaLivro.src = book.volumeInfo.imageLinks
+    ? book.volumeInfo.imageLinks.thumbnail
+    : "./assets/covernotavailable.png";
+  tituloLivro.textContent = book.volumeInfo.title;
+  autorAnoLivro.textContent = `${book.volumeInfo.authors.join(", ")} - ${
+    book.volumeInfo.publishedDate
+  }`;
+  avaliacaoLivro.innerHTML =
+    book.volumeInfo.description || "Descrição não disponível";
+}
+
+// Main function to execute when the page loads
+document.addEventListener("DOMContentLoaded", async () => {
+  const bookId = getQueryParam("id");
+  if (bookId) {
+    const bookDetails = await fetchBookDetails(bookId);
+    displayBookDetails(bookDetails);
+  } else {
+    console.error("Book ID not found in URL");
+  }
+});
