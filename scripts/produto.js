@@ -102,3 +102,123 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Book ID not found in URL");
   }
 });
+
+const btLido = document.getElementById("addLido");
+const btWishList = document.getElementById("addWishlist");
+
+const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+var emailUser = loggedInUser.email;
+var usersStorage = JSON.parse(localStorage.getItem("users")) || [];
+
+var userIndex = usersStorage.findIndex((obj) => obj.email === emailUser);
+var userLidos = usersStorage[userIndex].livrosLidos;
+var userWishlist = usersStorage[userIndex].wishlist;
+
+btLido.addEventListener("click", function () {
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn !== "true" || !loggedInUser) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Você tem que estar logado para adicionar este livro",
+      customClass: {
+        confirmButton: "custom-button",
+      },
+    });
+    fecharPopup();
+    return;
+  } else {
+    let livro = getQueryParam("id");
+    let verifyList = userLidos.includes(livro);
+
+    if (verifyList === false) {
+      userLidos.push(livro);
+      usersStorage[userIndex].livrosLidos = userLidos;
+
+      userWishlist = userWishlist.filter((e) => e !== livro);
+      usersStorage[userIndex].wishlist = userWishlist;
+
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Adicionado a lista de livros lidos",
+        showConfirmButton: false,
+        timer: 1500,
+        customClass: {
+          confirmButton: "custom-button",
+        },
+      });
+    } else {
+      Swal.fire({
+        position: "center",
+        title: "Livro já marcado como lido",
+        showConfirmButton: false,
+        timer: 1500,
+        customClass: {
+          confirmButton: "custom-button",
+        },
+      });
+    }
+    localStorage.setItem("users", JSON.stringify(usersStorage));
+  }
+});
+
+////////////////////////////// wishlist
+btWishList.addEventListener("click", function () {
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn !== "true" || !loggedInUser) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Você tem que estar logado para adicionar este livro",
+      customClass: {
+        confirmButton: "custom-button",
+      },
+    });
+    fecharPopup();
+    return;
+  } else {
+    let livro = getQueryParam("id");
+    let verifyWishlist = userWishlist.includes(livro);
+    let verifyList = userLidos.includes(livro);
+
+    if (verifyWishlist === false && verifyList === false) {
+      userWishlist.push(livro);
+      usersStorage[userIndex].wishlist = userWishlist;
+
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Adicionado a sua Wishlist",
+        showConfirmButton: false,
+        timer: 1500,
+        customClass: {
+          confirmButton: "custom-button",
+        },
+      });
+    } else if (verifyList === true) {
+      Swal.fire({
+        position: "center",
+        title: "Livro já marcado como lido",
+        showConfirmButton: false,
+        timer: 1500,
+        customClass: {
+          confirmButton: "custom-button",
+        },
+      });
+    } else {
+      Swal.fire({
+        position: "center",
+        title: "Livro já adicionado a Wishlist",
+        showConfirmButton: false,
+        timer: 1500,
+        customClass: {
+          confirmButton: "custom-button",
+        },
+      });
+    }
+    localStorage.setItem("users", JSON.stringify(usersStorage));
+  }
+});
