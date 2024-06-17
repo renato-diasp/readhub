@@ -173,3 +173,8 @@ section p {
   background-color: #365a5a; /* Red background */
   color: #fff; /* White text color */
 }
+
+#section-books {
+  display: flex;
+  flex-wrap: wrap;
+}

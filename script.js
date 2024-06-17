@@ -159,6 +159,7 @@ const bookName = document.getElementById("bookname");
 const authorName = document.getElementById("authorname");
 const searchBookButton = document.getElementById("searchbook");
 let infoBook = document.getElementById("infobook");
+const sectionBooks = document.getElementById("section-books");
 
 // Function to fetch data from the Google Books API
 async function consultaApi() {
@@ -232,3 +233,57 @@ document.addEventListener("click", function (event) {
     window.location.href = url.toString();
   }
 });
+
+// Function to generate random book covers
+async function generateBooks() {
+  sectionBooks.innerHTML = ""; // Clear any existing content
+
+  try {
+    const response = await fetch(
+      "https://www.googleapis.com/books/v1/volumes?q=famous+books&maxResults=40"
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    const books = data.items;
+
+    // Shuffle the array to get random books
+    books.sort(() => Math.random() - 0.5);
+
+    // Select a random subset of 10 books
+    const selectedBooks = books.slice(0, 100);
+
+    selectedBooks.forEach((book) => {
+      sectionBooks.innerHTML += `
+        <div class="card">
+          <a href="./produto.html" onclick="linkBook()" class="ver-mais-link" data-id="${
+            book.id
+          }">
+            <img src="${
+              book.volumeInfo.imageLinks
+                ? book.volumeInfo.imageLinks.thumbnail
+                : "placeholder.jpg"
+            }" alt="${book.volumeInfo.title}">
+          </a>
+        </div>
+      `;
+    });
+  } catch (error) {
+    console.error("Fetch error: ", error);
+    sectionBooks.innerHTML = "<p>Failed to load books.</p>";
+  }
+}
+
+// Event listener for DOMContentLoaded to generate random books on page load
+document.addEventListener("DOMContentLoaded", function () {
+  generateBooks();
+});
+
+function linkBook() {
+  event.preventDefault();
+  const bookId = event.target.closest("a").getAttribute("data-id");
+  const url = new URL(event.target.closest("a").href);
+  url.searchParams.set("id", bookId);
+  window.location.href = url.toString();
+}
